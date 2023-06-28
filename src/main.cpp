@@ -8,7 +8,7 @@ bool willMainTerminate = false;
 int main()
 {
 	system("clear");
-	cout << "Welcome to the learning file" << endl;
+	cout << "Welcome to the learning C++ project" << endl;
 	while (!willMainTerminate)
 	{
 		willMainTerminate = inputHandler();
