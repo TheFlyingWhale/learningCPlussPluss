@@ -54,7 +54,7 @@ string getTypeName()
 template <typename T>
 void printExample(T value)
 {
-	cout << "This is value: " << value << " which is of type " << getTypeName<decltype(value)>() << endl;
+	cout << value << " is a " << getTypeName<decltype(value)>() << endl;
 }
 
 void printAllDataTypeExamples()

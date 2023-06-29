@@ -6,6 +6,7 @@ bool willLessonTerminate = false;
 
 int lessonHandler()
 {
+	willLessonTerminate = false;
 	while (!willLessonTerminate)
 	{
 		willLessonTerminate = commandHandler(ProcessConstants::LESSONS);
