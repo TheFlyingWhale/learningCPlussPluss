@@ -48,7 +48,7 @@ int lessonCommandHandler(string input)
 
 	if (input == "01")
 	{
-		cout << "You selected 01 lesson" << endl;
+		printAllDataTypeExamples();
 		return 0;
 	}
 

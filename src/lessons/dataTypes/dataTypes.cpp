@@ -1,4 +1,5 @@
 #include <iostream>
+#include <type_traits>
 using namespace std;
 
 // This is a number
@@ -16,7 +17,7 @@ double myDouble = 9.89;
 
 // This is a character
 // Wrapped by Apostrophes -> ''
-char myLetter = 'D';
+char myChar = 'D';
 
 // This is a string
 // Wrapped by Ditto marks -> ""
@@ -26,7 +27,42 @@ string myString = "My string";
 // This is a boolean
 bool myBool = false;
 
-int printTypeExamples()
+template <typename T>
+string getTypeName()
 {
-	return 0;
+	if (is_same<T, int>::value)
+		return "int";
+
+	if (is_same<T, float>::value)
+		return "float";
+
+	if (is_same<T, double>::value)
+		return "double";
+
+	if (is_same<T, char>::value)
+		return "char";
+
+	if (is_same<T, string>::value)
+		return "string";
+
+	if (is_same<T, bool>::value)
+		return "boolean";
+
+	return "unknown";
+}
+
+template <typename T>
+void printExample(T value)
+{
+	cout << "This is value: " << value << " which is of type " << getTypeName<decltype(value)>() << endl;
+}
+
+void printAllDataTypeExamples()
+{
+	printExample(myNumber);
+	printExample(myFloat);
+	printExample(myDouble);
+	printExample(myChar);
+	printExample(myString);
+	printExample(myBool);
 }

@@ -4,5 +4,6 @@
 #define LESSON_HANDLER
 
 int lessonHandler();
+void printAllDataTypeExamples();
 
 #endif
