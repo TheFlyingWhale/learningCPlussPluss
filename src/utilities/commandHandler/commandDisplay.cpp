@@ -29,7 +29,7 @@ void displayCommandsTitle(string title)
 // Invalid warning
 void displayInvalidCommand()
 {
-	cout << "Your provided an invalid command\n";
+	cout << "You provided an invalid command\n";
 	cout << "Available commands is listed bellow \n\n";
 }
 // Default commands
