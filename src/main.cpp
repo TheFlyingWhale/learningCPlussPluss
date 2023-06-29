@@ -1,17 +1,16 @@
 #include <iostream>
 #include <string>
 #include "utilities/utilities.h"
+#include "./constants.h"
 using namespace std;
 
 bool willMainTerminate = false;
 
 int main()
 {
-	system("clear");
-	cout << "Welcome to the learning C++ project" << endl;
 	while (!willMainTerminate)
 	{
-		willMainTerminate = inputHandler();
+		willMainTerminate = commandHandler(ProcessConstants::MAIN);
 	}
 	return 0;
 }

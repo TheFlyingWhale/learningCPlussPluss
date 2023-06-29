@@ -1,2 +1,3 @@
-#include "inputHandler/inputHandler.h"
+#include "commandHandler/commandHandler.h"
 #include "terminator/terminator.h"
+#include "processGreeter/processGreeter.h"

@@ -4,9 +4,9 @@ using namespace std;
 
 const char terminateChar = 'q';
 
-int terminateProgram()
+int terminateProgram(ProcessConstants::ProcessType process)
 {
 	system("clear");
-	cout << "Program terminated" << endl;
+	cout << "You've exited " << process << endl;
 	return 1;
 }
