@@ -3,7 +3,6 @@
 #include <array>
 #include "commandHandler.h"
 #include "../../lessons/lessons.h"
-#include "../printProvidedInput/printProvidedInput.h"
 
 using namespace std;
 string providedInput = "";
