@@ -7,11 +7,11 @@
 
 using namespace std;
 
-int commandHandler(ProcessConstants::ProcessType process);
-string requestCommand(ProcessConstants::ProcessType process);
+int commandHandler(ProcessConstants::ProcessName process);
+string requestCommand(ProcessConstants::ProcessName process);
 int lessonCommandHandler(string input);
 
-int displayCommands(bool invalidCommand, ProcessConstants::ProcessType process);
+int displayCommands(bool invalidCommand, ProcessConstants::ProcessName process);
 void displayInvalidCommand();
 void displayCommandsTitle(string title);
 void displayDefaultCommands();

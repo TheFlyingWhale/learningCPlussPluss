@@ -5,6 +5,6 @@
 #include <iostream>
 using namespace std;
 
-int terminateProgram(ProcessConstants::ProcessType process);
+int terminateProgram(ProcessConstants::ProcessName process);
 
 #endif

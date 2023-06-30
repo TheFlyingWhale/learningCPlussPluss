@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int displayCommands(bool invalidInput, ProcessConstants::ProcessType process)
+int displayCommands(bool invalidInput, ProcessConstants::ProcessName process)
 {
 	if (invalidInput)
 	{
