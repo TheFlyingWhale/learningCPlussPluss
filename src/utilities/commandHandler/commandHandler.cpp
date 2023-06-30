@@ -47,7 +47,13 @@ int lessonCommandHandler(string input)
 
 	if (input == "01")
 	{
-		printAllDataTypeExamples();
+		printDataTypesLesson();
+		return 0;
+	}
+
+	if (input == "02")
+	{
+		printOperatorsLesson();
 		return 0;
 	}
 

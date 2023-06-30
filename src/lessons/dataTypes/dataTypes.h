@@ -5,6 +5,6 @@ using namespace std;
 template <typename T>
 void printExample(T value, const string additionalText = "");
 
-void printAllDataTypeExamples();
+void printDataTypesLesson();
 
 #endif

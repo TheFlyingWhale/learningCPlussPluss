@@ -65,7 +65,7 @@ void printExample(T value, const string additionalText)
 	cout << value << " is a " << getTypeAsString<decltype(value)>() << endl;
 }
 
-void printAllDataTypeExamples()
+void printDataTypesLesson()
 {
 	printExample(myNumber);
 

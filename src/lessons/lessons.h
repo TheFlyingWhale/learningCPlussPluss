@@ -3,6 +3,7 @@
 
 #include "../constants.h"
 #include "dataTypes/dataTypes.h"
+#include "operators/operators.h"
 
 using namespace std;
 

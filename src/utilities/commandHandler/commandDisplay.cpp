@@ -61,8 +61,9 @@ void displayMainCommands()
 }
 
 // Lesson commands
-array<string, 1> lessonCommands = {
-	"01 - Data Types"};
+array<string, 2> lessonCommands = {
+	"01 - Data Types",
+	"02 - Operators"};
 
 void displayLessonCommands()
 {
