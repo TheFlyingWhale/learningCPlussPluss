@@ -51,14 +51,14 @@ void displayDefaultCommands()
 	}
 }
 
-array<string, 1> mainCommands = {
+string mainCommands[] = {
 	"l - Enter lessons"};
 
 void displayMainCommands()
 {
 	displayCommandsTitle("Main");
 
-	for (int i = 0; i < mainCommands.size(); i++)
+	for (int i = 0; i < sizeof(mainCommands) / sizeof(mainCommands[0]); i++)
 	{
 		cout << "\t" << mainCommands[i] << "\n";
 	}
