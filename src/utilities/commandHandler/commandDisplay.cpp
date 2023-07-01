@@ -35,7 +35,7 @@ void displayInvalidCommand()
 }
 
 // <---- Default commands
-array<string, 2> defaultCommands = {
+string defaultCommands[] = {
 	"h - Help",
 	"q - Exit",
 };
@@ -45,7 +45,7 @@ void displayDefaultCommands()
 	cout << "Compiled as " << getCPlusPlusVersionAsString() << "\n\n";
 
 	displayCommandsTitle("Default");
-	for (int i = 0; i < defaultCommands.size(); i++)
+	for (int i = 0; i < sizeof(defaultCommands) / sizeof(defaultCommands[0]); i++)
 	{
 		cout << "\t" << defaultCommands[i] << "\n";
 	}
@@ -65,7 +65,7 @@ void displayMainCommands()
 }
 
 // <---- Lesson commands
-array<string, 3> lessonCommands = {
+string lessonCommands[] = {
 	"01 - Data Types",
 	"02 - Operators",
 	"03 - Switch"};
@@ -73,7 +73,7 @@ array<string, 3> lessonCommands = {
 void displayLessonCommands()
 {
 	displayCommandsTitle("Lessons");
-	for (int i = 0; i < lessonCommands.size(); i++)
+	for (int i = 0; i < sizeof(lessonCommands) / sizeof(lessonCommands[0]); i++)
 	{
 		cout << "\t" << lessonCommands[i] << "\n";
 	}
