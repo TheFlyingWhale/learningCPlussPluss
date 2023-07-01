@@ -7,7 +7,7 @@
 using namespace std;
 string providedInput = "";
 
-int commandHandler(ProcessConstants::ProcessName process)
+int commandHandler(ProcessConstants::ProcessType process)
 {
 	providedInput = requestCommand(process);
 	const char commandChar = providedInput[0];
@@ -29,7 +29,7 @@ int commandHandler(ProcessConstants::ProcessName process)
 	return 0;
 }
 
-string requestCommand(ProcessConstants::ProcessName process)
+string requestCommand(ProcessConstants::ProcessType process)
 {
 	cout << process << " - (h for help):" << endl;
 	getline(cin, providedInput);

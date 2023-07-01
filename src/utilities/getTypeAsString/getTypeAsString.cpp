@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Takes a value and return its type
 template <typename T>
 string getTypeAsString()
 {

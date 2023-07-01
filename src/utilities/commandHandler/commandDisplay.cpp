@@ -26,13 +26,14 @@ void displayCommandsTitle(string title)
 	cout << title << " commands:" << endl;
 }
 
-// Invalid warning
+// <---- Invalid warning
 void displayInvalidCommand()
 {
 	cout << "You provided an invalid command\n";
 	cout << "Available commands is listed bellow \n\n";
 }
-// Default commands
+
+// <---- Default commands
 array<string, 3> defaultCommands = {
 	"h - Help",
 	"q - Exit",
@@ -60,7 +61,7 @@ void displayMainCommands()
 	}
 }
 
-// Lesson commands
+// <---- Lesson commands
 array<string, 2> lessonCommands = {
 	"01 - Data Types",
 	"02 - Operators"};

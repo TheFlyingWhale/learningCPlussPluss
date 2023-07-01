@@ -1,6 +1,6 @@
+#include <iostream>
 #include "../terminator/terminator.h"
 #include "../../constants.h"
-#include <iostream>
 
 #ifndef HELPERS
 #define HELPERS

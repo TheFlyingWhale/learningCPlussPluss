@@ -2,13 +2,14 @@
 #define CONSTANTS
 
 #include <string>
+using namespace std;
 
 namespace ProcessConstants
 {
-	typedef std::string ProcessName;
+	typedef string ProcessName;
 
-	const std::string MAIN = "MAIN";
-	const std::string LESSONS = "LESSONS";
+	const string MAIN = "MAIN";
+	const string LESSONS = "LESSONS";
 }
 
 #endif
