@@ -57,6 +57,12 @@ int lessonCommandHandler(string input)
 		return 0;
 	}
 
+	if (input == "03")
+	{
+		switchLessonHandler();
+		return 0;
+	}
+
 	return displayCommands(true, ProcessConstants::LESSONS);
 
 	return 0;

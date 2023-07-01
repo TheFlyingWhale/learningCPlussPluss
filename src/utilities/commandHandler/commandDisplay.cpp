@@ -1,5 +1,6 @@
-#include "commandHandler.h"
 #include <iostream>
+#include "commandHandler.h"
+#include "../getCPlusPlusVersionAsString/getCPlusPlusVersionAsString.h"
 using namespace std;
 
 int displayCommands(bool invalidInput, ProcessConstants::ProcessName process)
@@ -34,13 +35,15 @@ void displayInvalidCommand()
 }
 
 // <---- Default commands
-array<string, 3> defaultCommands = {
+array<string, 2> defaultCommands = {
 	"h - Help",
 	"q - Exit",
 };
 
 void displayDefaultCommands()
 {
+	cout << "Compiled as " << getCPlusPlusVersionAsString() << "\n\n";
+
 	displayCommandsTitle("Default");
 	for (int i = 0; i < defaultCommands.size(); i++)
 	{
@@ -62,9 +65,10 @@ void displayMainCommands()
 }
 
 // <---- Lesson commands
-array<string, 2> lessonCommands = {
+array<string, 3> lessonCommands = {
 	"01 - Data Types",
-	"02 - Operators"};
+	"02 - Operators",
+	"03 - Switch"};
 
 void displayLessonCommands()
 {

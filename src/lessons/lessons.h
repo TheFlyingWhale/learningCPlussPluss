@@ -4,6 +4,7 @@
 #include "../constants.h"
 #include "dataTypes/dataTypes.h"
 #include "operators/operators.h"
+#include "switch/switch.h"
 
 using namespace std;
 

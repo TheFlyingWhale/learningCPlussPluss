@@ -18,6 +18,7 @@ void displayDefaultCommands();
 void displayMainCommands();
 void displayLessonCommands();
 
+string getCPlusPlusVersionAsString();
 int printProvidedInput(string input);
 
 #endif
