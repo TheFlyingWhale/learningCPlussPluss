@@ -35,8 +35,7 @@ void printLoopLesson()
 {
 	system("clear");
 	print("Loops");
-	print("Are blocks of code thats beeing repeated");
-	print("until a condition is met");
+	print("Are blocks of code thats beeing repeated until a condition is met");
 }
 
 void requestLoopInput()
