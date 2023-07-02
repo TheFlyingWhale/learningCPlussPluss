@@ -62,22 +62,17 @@ int switchLesson()
 	case 1:
 		print("Nice, your happy!");
 		newLine();
-		break;
 	case 2:
 		print("Aww, don't me sad. Thinking about puppies might improve your mood!");
 		newLine();
-		break;
 	case 3:
 		print("Hmmm...");
 		newLine();
-		break;
 	case 4:
 		print("Wow, whats the surprise?!");
-		newLine();
 		break;
 	default:
 		print("Thats an invalid smiley, or no smiley at all! Try again");
-		newLine();
 	}
 
 	return 0;
@@ -85,6 +80,7 @@ int switchLesson()
 
 string requestSmileyInput()
 {
+	newLine();
 	print("Provide a smiley - or 'q' to exit lesson");
 	string input = "";
 	getline(cin, input);

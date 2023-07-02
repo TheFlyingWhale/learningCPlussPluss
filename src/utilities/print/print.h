@@ -1,5 +1,6 @@
 #ifndef PRINT_LINE
 #define PRINT_LINE
+using namespace std;
 
 // Passes the provided parameter to std::out
 template <typename T>

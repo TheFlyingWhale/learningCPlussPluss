@@ -32,5 +32,5 @@ template string getTypeAsString<int>();
 template string getTypeAsString<float>();
 template string getTypeAsString<double>();
 template string getTypeAsString<char>();
-template string getTypeAsString<std::string>();
+template string getTypeAsString<string>();
 template string getTypeAsString<bool>();

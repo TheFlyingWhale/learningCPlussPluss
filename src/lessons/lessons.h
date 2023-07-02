@@ -5,6 +5,7 @@
 #include "dataTypes/dataTypes.h"
 #include "operators/operators.h"
 #include "switch/switch.h"
+#include "loops/loops.h"
 
 using namespace std;
 
