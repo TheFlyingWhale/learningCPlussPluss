@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
-#include <sstream>
 #include "../../utilities/utilities.h"
 #include "loops.h"
 using namespace std;
@@ -26,7 +24,10 @@ int loopLesson()
 	if (input.substr(0, 3) == "for")
 	{
 		printForLoop(input);
+		return 0;
 	}
+
+	printf("No valid command was provided\n");
 
 	return 0;
 }
@@ -34,67 +35,24 @@ int loopLesson()
 void printLoopLesson()
 {
 	system("clear");
-	print("Loops");
-	print("Are blocks of code thats beeing repeated until a condition is met");
+	printf("Loops\n");
+	printf("Are blocks of code thats beeing repeated until a condition is met\n");
 }
 
 void requestLoopInput()
 {
-	newLine();
-	print("Available commands:");
+	printf("\n");
+	printf("Available commands:\n");
 
 	string availableCommands[] = {
 		"q - Exit lesson",
-		"for [loops] - Runs a for loop that prints its index based on provided input",
-	};
+		"for [number] - Runs a For Loop based on provided number",
+		"\t-b [number] - Breaks the loop on provided number",
+		"\t-c [number] - Continues the loop on provided number"};
 
 	for (string command : availableCommands)
 	{
 		cout << "\t" << command << endl;
 	}
-	print("");
-}
-
-void printForLoop(string inputString)
-{
-	char delimiter = ' ';
-	vector<string> result;
-	string::size_type start = 0;
-	string::size_type end = inputString.find(delimiter);
-
-	while (end != string::npos)
-	{
-		result.push_back(inputString.substr(start, end - start));
-		start = end + 1;
-		end = inputString.find(delimiter, start);
-	}
-
-	result.push_back(inputString.substr(start));
-
-	int vectorSize = 0;
-	vectorSize = int(result.size());
-
-	if (vectorSize != 2)
-	{
-		print("Invalid input, try again\n");
-		return;
-	}
-
-	int numberOfIterations = 0;
-	try
-	{
-		numberOfIterations = stoi(result[1]);
-	}
-	catch (const invalid_argument &e)
-	{
-		print("Invalid input, try again\n");
-		return;
-	}
-
-	printf("Number of iterations: %i\n", numberOfIterations);
-
-	for (int i = 0; i < numberOfIterations; i++)
-	{
-		printf("Iteration %i\n", i + 1);
-	}
+	printf("\n");
 }

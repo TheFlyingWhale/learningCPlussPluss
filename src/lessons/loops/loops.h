@@ -1,5 +1,6 @@
 #ifndef LOOP_LESSON
 #define LOOP_LESSON
+using namespace std;
 
 void loopLessonHandler();
 
