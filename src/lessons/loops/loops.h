@@ -12,4 +12,6 @@ void requestLoopInput();
 
 void printForLoop(string inputString);
 
+void printDoWhileLoop();
+
 #endif

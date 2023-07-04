@@ -61,18 +61,19 @@ int switchLesson()
 	{
 	case 1:
 		print("Nice, your happy!");
-		newLine();
+		break;
 	case 2:
 		print("Aww, don't me sad. Thinking about puppies might improve your mood!");
-		newLine();
+		break;
 	case 3:
 		print("Hmmm...");
-		newLine();
+		break;
 	case 4:
 		print("Wow, whats the surprise?!");
 		break;
 	default:
 		print("Thats an invalid smiley, or no smiley at all! Try again");
+		break;
 	}
 
 	return 0;
