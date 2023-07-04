@@ -33,7 +33,7 @@ void printForLoop(string inputString)
 	}
 	catch (const invalid_argument &e)
 	{
-		printf("Invalid input, for must be followed by a number\n");
+		printf("Invalid input, [for] must be followed by a number\n");
 		return;
 	}
 
