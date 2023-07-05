@@ -7,6 +7,7 @@
 #include "switch/switch.h"
 #include "loops/loops.h"
 #include "structures/structures.h"
+#include "references/references.h"
 
 using namespace std;
 
