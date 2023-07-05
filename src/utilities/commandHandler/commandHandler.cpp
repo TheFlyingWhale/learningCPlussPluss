@@ -69,6 +69,12 @@ int lessonCommandHandler(string input)
 		return 0;
 	}
 
+	if (input == "05")
+	{
+		structuresLessonHandler();
+		return 0;
+	}
+
 	return displayCommands(true, ProcessConstants::LESSONS);
 
 	return 0;

@@ -69,7 +69,8 @@ string lessonCommands[] = {
 	"01 - Data Types",
 	"02 - Operators",
 	"03 - Switch",
-	"04 - Loops"};
+	"04 - Loops",
+	"05 - Structures"};
 
 void displayLessonCommands()
 {
