@@ -75,6 +75,11 @@ int lessonCommandHandler(string input)
 		return 0;
 	}
 
+	if (input == "06")
+	{
+		referencesLessonHandler();
+	}
+
 	return displayCommands(true, ProcessConstants::LESSONS);
 
 	return 0;
