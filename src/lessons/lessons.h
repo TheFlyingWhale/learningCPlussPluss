@@ -6,6 +6,7 @@
 #include "operators/operators.h"
 #include "switch/switch.h"
 #include "loops/loops.h"
+#include "structures/structures.h"
 
 using namespace std;
 
