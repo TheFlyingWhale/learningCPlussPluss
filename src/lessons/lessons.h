@@ -8,6 +8,7 @@
 #include "loops/loops.h"
 #include "structures/structures.h"
 #include "references/references.h"
+#include "pointers/pointers.h"
 
 using namespace std;
 

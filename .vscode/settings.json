@@ -29,6 +29,7 @@
 		"__split_buffer": "cpp",
 		"array": "cpp",
 		"initializer_list": "cpp",
-		"stdexcept": "cpp"
+		"stdexcept": "cpp",
+		"typeinfo": "cpp"
 	}
 }
