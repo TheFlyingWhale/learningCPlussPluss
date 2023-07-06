@@ -78,11 +78,13 @@ int lessonCommandHandler(string input)
 	if (input == "06")
 	{
 		referencesLessonHandler();
+		return 0;
 	}
 
 	if (input == "07")
 	{
 		pointersLessonHandler();
+		return 0;
 	}
 
 	return displayCommands(true, ProcessConstants::LESSONS);
