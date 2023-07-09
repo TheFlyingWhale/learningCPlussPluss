@@ -20,13 +20,13 @@ void printBasicLesson()
 	person3.age = 22;
 
 	printf("In this lesson I've created a structure that holds name and age, representing a person.\n\n");
-	printf("Person 1:\n");
+	printf("BasicPerson 1:\n");
 	printf("\tName:%s\n", person1.name.c_str());
 	printf("\tAge:%i\n\n", person1.age);
-	printf("Person 2:\n");
+	printf("BasicPerson 2:\n");
 	printf("\tName:%s\n", person2.name.c_str());
 	printf("\tAge:%i\n\n", person2.age);
-	printf("Person 3:\n");
+	printf("BasicPerson 3:\n");
 	printf("\tName:%s\n", person3.name.c_str());
 	printf("\tAge:%i\n\n", person3.age);
 	printf("The boring part here is that I had to create the used variable right after the structure.\n");

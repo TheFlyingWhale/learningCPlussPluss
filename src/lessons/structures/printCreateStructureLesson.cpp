@@ -5,7 +5,7 @@ using namespace std;
 
 void printCreateLesson()
 {
-	printf("In this lesson we're going to create people using a Person structure.\n");
+	printf("In this lesson we're going to create people using a BasicPerson structure.\n");
 	printf("When a person is created they'll be added to a vector.\n");
 	printf("\n");
 	printf("So the structure enables me to tell the vector what data it will be storing.\n");

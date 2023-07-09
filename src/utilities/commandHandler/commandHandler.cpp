@@ -87,6 +87,12 @@ int lessonCommandHandler(string input)
 		return 0;
 	}
 
+	if (input == "08")
+	{
+		classesLessonHandler();
+		return 0;
+	}
+
 	return displayCommands(true, ProcessConstants::LESSONS);
 
 	return 0;
