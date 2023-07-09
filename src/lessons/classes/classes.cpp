@@ -53,6 +53,12 @@ int classesLesson()
 		return 0;
 	}
 
+	if (input == "i")
+	{
+		classesWithInheritanceLesson();
+		return 0;
+	}
+
 	return 0;
 }
 
@@ -72,7 +78,8 @@ void requestClassesInput()
 		"m - Classes with methods",
 		"c - Classes with constructors",
 		"a - Classes with specific access",
-		"e - Classes with encapsulation"};
+		"e - Classes with encapsulation",
+		"i - Classes with inheritance"};
 
 	for (string command : availableCommands)
 	{
@@ -285,19 +292,9 @@ public:
 		name = pName;
 	}
 
-	string getName()
-	{
-		return name;
-	}
-
 	void setAge(int pAge)
 	{
 		age = pAge;
-	}
-
-	int getAge()
-	{
-		return age;
 	}
 
 	void setFavoriteFood(string pFavoriteFood)
@@ -337,4 +334,11 @@ void classesWithEncapsulationLesson()
 	printf("Now I've used the setter methods to change its attributes\n");
 	printf("Lets take a look at the updated person\n");
 	personOne.printAttributes();
+}
+
+void classesWithInheritanceLesson()
+{
+	printf("Inheritance enables us to create blueprints which other classes can use\n");
+	printf("I've pretty much jumped the gun here since all classes in these lessons have inherited the BasicPerson class\n");
+	printf("It lets us create variants of familiar objects, focusing on the differences rather than whats shared.\n");
 }
