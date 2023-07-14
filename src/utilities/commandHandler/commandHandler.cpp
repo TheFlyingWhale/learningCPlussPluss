@@ -2,6 +2,7 @@
 #include <string>
 #include <array>
 #include "commandHandler.h"
+#include "../requestInput/requestInput.h"
 #include "../../lessons/lessons.h"
 
 using namespace std;
@@ -33,7 +34,8 @@ string requestCommand(ProcessConstants::ProcessName process)
 {
 	cout << process << " - (h for help):" << endl;
 	getline(cin, providedInput);
-	system("clear");
+	clearTerminal();
+	// system("clear");
 	return providedInput;
 }
 

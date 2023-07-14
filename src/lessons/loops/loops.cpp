@@ -6,6 +6,7 @@ using namespace std;
 
 void loopLessonHandler()
 {
+	printLoopLesson();
 	int willLoopLessonTerminate = false;
 	while (!willLoopLessonTerminate)
 	{
@@ -15,7 +16,6 @@ void loopLessonHandler()
 
 int loopLesson()
 {
-	printLoopLesson();
 	string input = requestInput(requestLoopInput, true);
 
 	if (input == "q")
