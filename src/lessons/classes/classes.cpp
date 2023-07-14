@@ -59,6 +59,17 @@ int classesLesson()
 		return 0;
 	}
 
+	if (input == "im")
+	{
+		classesWithMultipleInheritance();
+		return 0;
+	}
+
+	if (input == "as")
+	{
+		classesWithAccessSpecifiers();
+	}
+
 	return 0;
 }
 
@@ -79,7 +90,9 @@ void requestClassesInput()
 		"c - Classes with constructors",
 		"a - Classes with specific access",
 		"e - Classes with encapsulation",
-		"i - Classes with inheritance"};
+		"i - Classes with inheritance",
+		"im - Classes with multiple inheritances",
+		"as - Classes with access specifiers vol.2"};
 
 	for (string command : availableCommands)
 	{
@@ -241,6 +254,9 @@ void classesConstructorsLesson()
 
 class AccessPerson : public ConstructorPerson
 {
+private:
+	string secret = "I ain't got no secrets!";
+
 public:
 	using ConstructorPerson::ConstructorPerson;
 
@@ -258,9 +274,6 @@ public:
 	{
 		printf("Secret: %s\n", secret.c_str());
 	}
-
-private:
-	string secret = "I ain't got no secrets!";
 };
 
 void classesAccessLesson()
@@ -339,6 +352,114 @@ void classesWithEncapsulationLesson()
 void classesWithInheritanceLesson()
 {
 	printf("Inheritance enables us to create blueprints which other classes can use\n");
-	printf("I've pretty much jumped the gun here since all classes in these lessons have inherited the BasicPerson class\n");
+	printf("I've pretty much jumped the gun on this one since all classes in these lessons have inherited the BasicPerson class\n");
 	printf("It lets us create variants of familiar objects, focusing on the differences rather than whats shared.\n");
+	printf("\n");
+	printf("There is also multilevel inheritance.\n");
+	printf("It's when a third class inherits a second class which inherits a first class. Classception.\n");
+	printf("So is the case with ConstructorClass, which inherits MethodClass, which inherits BasicClass.\n");
+}
+
+class WithMoreFavoritesPerson
+{
+protected:
+	string favoriteArtist = "No favorite artist";
+	string favoriteColor = "No favorite color";
+	int favoriteNumber = 0;
+
+public:
+	void setFavoriteArtist(string fArtist)
+	{
+		favoriteArtist = fArtist;
+	}
+
+	void setFavoriteColor(string fColor)
+	{
+		favoriteColor = fColor;
+	}
+
+	void setFavoriteNumber(int fNumber)
+	{
+		favoriteNumber = fNumber;
+	}
+};
+
+class MultipleInheritancePerson : public BasicPerson, public WithMoreFavoritesPerson
+{
+public:
+	void setName(string pName)
+	{
+		name = pName;
+	}
+	void setAge(int pAge)
+	{
+		age = pAge;
+	}
+	void setFavoriteFood(string pFavoriteFood)
+	{
+		favoriteFood = pFavoriteFood;
+	}
+
+	void printAttributes()
+	{
+		printf("\n");
+		printf("Name: %s\n", name.c_str());
+		printf("Age: %u\n", age);
+		printf("Favorite food: %s\n", favoriteFood.c_str());
+		printf("Favorite color: %s\n", favoriteColor.c_str());
+		printf("Favorite artist: %s\n", favoriteArtist.c_str());
+		printf("Favorite number: %i\n", favoriteNumber);
+	}
+};
+
+void classesWithMultipleInheritance()
+{
+	printf("Multiple inheritance\n");
+	printf("Enables us to create several classes that other classes may and may not have in common\n");
+
+	printf("\n");
+	printf("In this lesson I've created two classes:\n");
+	printf("\tWithMoreFavoritesPerson\n");
+	printf("\tMultipleInheritancePerson\n");
+
+	printf("\n");
+	printf("The first one is the same as the BasicPerson class, but with more favorites, and setter methods.\n");
+	printf("The last one extends the classes BasicPerson and WithMoreFavoritesPerson,\n");
+	printf("it also have setter methods for the attributes in BasicPerson, as well as a printAttributes method\n");
+
+	printf("\n");
+	printf("Lets take a look at the MultipleInheritancePerson class without setting any attributes:\n");
+	MultipleInheritancePerson perOne;
+	perOne.printAttributes();
+
+	printf("\n");
+	printf("Now let us use all the setters and take another look:\n");
+	perOne.setName("Knut");
+	perOne.setAge(43);
+	perOne.setFavoriteFood("Cheese burger");
+	perOne.setFavoriteArtist("Melokind");
+	perOne.setFavoriteColor("Blue");
+	perOne.setFavoriteNumber(69);
+	perOne.printAttributes();
+}
+
+void classesWithAccessSpecifiers()
+{
+	printf("I've already created a lesson for Access Specifiers.\n");
+	printf("But in that lesson we just used Public and Private. But there is a third one, Protected.\n");
+
+	printf("\n");
+	printf("- Public: Lets us access the attributes or methods from outside of the class.\n");
+	printf("- Private: Prohibits any access outside of the class.\n");
+	printf("- Protected: Gives only inheriting classes access the methods or attributes\n");
+
+	printf("\n");
+	printf("In the classesWithMultipleInheritance we created the class MultipleInheritancePerson,\n");
+	printf("which inherits the BasicPerson and WithMoreFavoritesPerson classes\n");
+	printf("BasicPerson have its attributes public,\n");
+	printf("which lets me manipulate the object from the outside.\n");
+	printf("WithMoreFavoritesPerson have its attributes protected,\n");
+	printf("which prohibits me from manipulating the attributes from the outside.\n");
+	printf("But since they're protected, the MultipleInheritanceClass have access to the attributes,\n");
+	printf("which lets me create and use the setter methods.\n");
 }

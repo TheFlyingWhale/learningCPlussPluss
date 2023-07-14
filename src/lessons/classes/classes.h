@@ -25,4 +25,8 @@ void classesWithEncapsulationLesson();
 
 void classesWithInheritanceLesson();
 
+void classesWithMultipleInheritance();
+
+void classesWithAccessSpecifiers();
+
 #endif

@@ -31,5 +31,6 @@
 		"initializer_list": "cpp",
 		"stdexcept": "cpp",
 		"typeinfo": "cpp"
-	}
+	},
+	"cSpell.words": ["Melokind"]
 }
