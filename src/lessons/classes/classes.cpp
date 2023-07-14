@@ -68,6 +68,13 @@ int classesLesson()
 	if (input == "as")
 	{
 		classesWithAccessSpecifiers();
+		return 0;
+	}
+
+	if (input == "p")
+	{
+		classesWithPolymorphism();
+		return 0;
 	}
 
 	return 0;
@@ -81,18 +88,20 @@ void printClassesLesson()
 void requestClassesInput()
 {
 	printf("\n");
+	printf("Classes\n");
 	printf("Available commands\n");
 
 	string availableCommands[] = {
 		"q - Exit lesson",
-		"b - Basic classes lesson",
-		"m - Classes with methods",
-		"c - Classes with constructors",
-		"a - Classes with specific access",
-		"e - Classes with encapsulation",
-		"i - Classes with inheritance",
-		"im - Classes with multiple inheritances",
-		"as - Classes with access specifiers vol.2"};
+		"b - Basic lesson",
+		"m - Methods",
+		"c - Constructors",
+		"a - Access specifiers",
+		"e - Encapsulation",
+		"i - Inheritance",
+		"im - Multiple inheritances",
+		"as - Access specifiers vol.2",
+		"p - Polymorphism"};
 
 	for (string command : availableCommands)
 	{
@@ -462,4 +471,86 @@ void classesWithAccessSpecifiers()
 	printf("which prohibits me from manipulating the attributes from the outside.\n");
 	printf("But since they're protected, the MultipleInheritanceClass have access to the attributes,\n");
 	printf("which lets me create and use the setter methods.\n");
+}
+
+class NationalityPerson
+{
+protected:
+	string name = "Person has no name";
+
+public:
+	void sayHello()
+	{
+		printf("The person says hello\n");
+	}
+
+	void setName(string pName)
+	{
+		name = pName;
+	}
+};
+
+class NorwegianPerson : public NationalityPerson
+{
+public:
+	void sayHello()
+	{
+		printf("Hei, mitt navn er %s\n", name.c_str());
+	}
+};
+
+class EnglishPerson : public NationalityPerson
+{
+public:
+	void sayHello()
+	{
+		printf("Hello, my name is %s\n", name.c_str());
+	}
+};
+
+class ItalianPerson : public NationalityPerson
+{
+public:
+	void sayHello()
+	{
+		printf("Ciao, mi chiamo %s\n", name.c_str());
+	}
+};
+
+void classesWithPolymorphism()
+{
+	printf("Polymorphism\n");
+	printf("Lets us override inherited methods or attributes.\n");
+	printf("In this lesson I've created the NationalityPerson class.\n");
+	printf("This class has a private name attribute and two methods; setName and sayHello\n");
+
+	printf("\n");
+	printf("These classes prints a hello message in their respective language, followed by their name\n");
+
+	printf("\n");
+	printf("Lets start with the NationalityPerson class.\n");
+	printf("Without calling the setName method, lets se what the sayHello method does.\n");
+	NationalityPerson perOne;
+	perOne.sayHello();
+
+	printf("\n");
+	printf("Ok, nothing interesting to say. Now lets try the NorwegianPerson class\n");
+	printf("This and the following classes inherits the NationalityPerson class, but morphs its sayHello method.");
+	printf("In all the following examples I'll be using setName give them the name Pål");
+	printf("Now lets se what NorwegianPerson has to say:\n");
+	NorwegianPerson perTwo;
+	perTwo.setName("Pål");
+	perTwo.sayHello();
+
+	printf("\n");
+	printf("EnglishPerson:\n");
+	EnglishPerson perThree;
+	perThree.setName("Pål");
+	perThree.sayHello();
+
+	printf("\n");
+	printf("ItalianPerson:\n");
+	ItalianPerson perFour;
+	perFour.setName("Pål");
+	perFour.sayHello();
 }

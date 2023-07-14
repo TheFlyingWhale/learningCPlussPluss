@@ -29,4 +29,6 @@ void classesWithMultipleInheritance();
 
 void classesWithAccessSpecifiers();
 
+void classesWithPolymorphism();
+
 #endif

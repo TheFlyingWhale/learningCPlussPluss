@@ -20,7 +20,6 @@ void printPointersLesson()
 
 int pointersLesson()
 {
-	system("clear");
 	string input = requestInput(requestPointersInput, true);
 
 	if (input == "q")

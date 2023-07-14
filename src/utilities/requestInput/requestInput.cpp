@@ -14,7 +14,7 @@ string requestInput(string prompt, bool clearAfterPrompt)
 	getline(cin, input);
 	if (clearAfterPrompt)
 	{
-		system("clear");
+		clearTerminal();
 	}
 	return input;
 }
@@ -26,7 +26,12 @@ string requestInput(void (*func)(), bool clearAfterPrompt)
 	getline(cin, input);
 	if (clearAfterPrompt)
 	{
-		system("clear");
+		clearTerminal();
 	}
 	return input;
+}
+
+void clearTerminal()
+{
+	printf("\033[2J\033c");
 }
