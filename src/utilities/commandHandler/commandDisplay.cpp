@@ -71,7 +71,9 @@ string lessonCommands[] = {
 	"03 - Switch",
 	"04 - Loops",
 	"05 - Structures",
-	"06 - References"};
+	"06 - References",
+	"07 - Pointers",
+	"08 - Classes"};
 
 void displayLessonCommands()
 {
