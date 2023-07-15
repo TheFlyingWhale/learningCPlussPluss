@@ -35,7 +35,6 @@ string requestCommand(ProcessConstants::ProcessName process)
 	cout << process << " - (h for help):" << endl;
 	getline(cin, providedInput);
 	clearTerminal();
-	// system("clear");
 	return providedInput;
 }
 
@@ -92,6 +91,12 @@ int lessonCommandHandler(string input)
 	if (input == "08")
 	{
 		classesLessonHandler();
+		return 0;
+	}
+
+	if (input == "09")
+	{
+		filesLessonHandler();
 		return 0;
 	}
 

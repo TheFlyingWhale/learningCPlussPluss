@@ -2,6 +2,7 @@
 #include "../../utilities/utilities.h"
 #include "operators.h"
 using namespace std;
+using namespace Print;
 
 int x = 10;
 int y = 5;
@@ -10,12 +11,12 @@ void printOperatorsLesson()
 {
 	print("Operators");
 	print("Are used to preform such as Arithmetics, Assignment, Comparison and Logic");
-	newLine();
+	newline();
 
 	print("In this lesson I'll be using two variables X and Y");
 	print("The X variable is set to be of int 10");
 	print("The Y variable is set to be of int 5");
-	newLine();
+	newline();
 
 	printOperationsArithmetics();
 	printAssignmentOperators();
@@ -27,29 +28,29 @@ void printOperationsArithmetics()
 	print("Lets start of with Arithmetic Operators");
 	print("Arithmetic means to manipulate numbers");
 	print("- Multiplication, adding two numbers together");
-	printMath("x + y", x + y);
-	newLine();
+	math("x + y", x + y);
+	newline();
 
 	print("- Subtraction, taking a amount from another");
-	printMath("x - y", x - y);
-	newLine();
+	math("x - y", x - y);
+	newline();
 
 	print("- Multiplication, multiply a value with itself an amount of times");
-	printMath("x * y", x * y);
-	newLine();
+	math("x * y", x * y);
+	newline();
 
 	print("- Division, Splitting a number into equal parts");
-	printMath("x / y", x / y);
-	newLine();
+	math("x / y", x / y);
+	newline();
 
 	print("- Increment, Increasing a number by a fixed amount");
-	printMath("++x", ++x);
-	newLine();
+	math("++x", ++x);
+	newline();
 
 	print("Decrement, Decreasing a number by a fixed amount");
-	printMath("--x", --x);
+	math("--x", --x);
 	print("This resulted in 10 because we incremented it first");
-	newLine();
+	newline();
 }
 
 void printAssignmentResult(string description)
@@ -95,7 +96,7 @@ void printAssignmentOperators()
 
 	x <<= 2;
 	printAssignmentResult("x <<= 2");
-	newLine();
+	newline();
 
 	x = 10;
 }
@@ -119,5 +120,5 @@ void printComparisonOperators()
 	printComparisonResult("<", x < y);
 	printComparisonResult(">=", x >= y);
 	printComparisonResult("<=", x <= y);
-	newLine();
+	newline();
 }

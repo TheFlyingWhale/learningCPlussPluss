@@ -3,6 +3,7 @@
 #include "../print/print.h"
 #include "requestInput.h"
 using namespace std;
+using namespace Print;
 
 string requestInput(string prompt, bool clearAfterPrompt)
 {
