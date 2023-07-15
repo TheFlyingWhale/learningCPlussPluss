@@ -64,7 +64,8 @@
 		"__nullptr": "cpp",
 		"compare": "cpp",
 		"concepts": "cpp",
-		"algorithm": "cpp"
+		"algorithm": "cpp",
+		"filesystem": "cpp"
 	},
 	"cSpell.words": ["Melokind"]
 }

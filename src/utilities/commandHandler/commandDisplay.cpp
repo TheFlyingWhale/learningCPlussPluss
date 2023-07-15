@@ -73,7 +73,8 @@ string lessonCommands[] = {
 	"05 - Structures",
 	"06 - References",
 	"07 - Pointers",
-	"08 - Classes"};
+	"08 - Classes",
+	"09 - Files"};
 
 void displayLessonCommands()
 {

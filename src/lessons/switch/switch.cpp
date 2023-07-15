@@ -3,6 +3,7 @@
 #include "switch.h"
 #include "../../utilities/utilities.h"
 using namespace std;
+using namespace Print;
 
 string switchInput = "";
 bool willSwitchLessonTerminate = false;
@@ -25,7 +26,7 @@ void printSwitchLesson()
 	print("Switch Statements");
 	print("Are basically a series of If Statements, but with its own syntax");
 	print("In this lesson I'm using a switch statement to react to your mood!");
-	newLine();
+	newline();
 }
 
 void initialiseSmileyMap()
@@ -81,7 +82,7 @@ int switchLesson()
 
 string requestSmileyInput()
 {
-	newLine();
+	newline();
 	print("Provide a smiley - or 'q' to exit lesson");
 	string input = "";
 	getline(cin, input);

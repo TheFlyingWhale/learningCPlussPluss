@@ -1,15 +1,27 @@
 #include <iostream>
 #include <string>
+#include "print.h"
 using namespace std;
 
-// Passes a std::endl to std::out
-void newLine()
+namespace Print
 {
-	cout << endl;
-}
+	void newline()
+	{
+		cout << endl;
+	}
 
-// Passes a description followed by the result to std::out
-void printMath(string description, int result)
-{
-	cout << description << " = " << result << endl;
-}
+	void math(string description, int result)
+	{
+		cout << description << " = " << result << endl;
+	}
+
+	void error(string message)
+	{
+		cerr << "\033[1;31mError:\033[0m " << message << endl;
+	};
+
+	void success(string message)
+	{
+		cerr << "\033[1;32mSuccess:\033[0m " << message << endl;
+	}
+};

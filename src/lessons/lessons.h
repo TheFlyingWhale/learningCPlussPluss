@@ -10,6 +10,7 @@
 #include "references/references.h"
 #include "pointers/pointers.h"
 #include "classes/classes.h"
+#include "files/files.h"
 
 using namespace std;
 
