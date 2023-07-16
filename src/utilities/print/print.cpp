@@ -17,11 +17,29 @@ namespace Print
 
 	void error(string message)
 	{
-		cerr << "\033[1;31mError:\033[0m " << message << endl;
+		cout << rich("Error: ", Color::red, Decoration::bold) << message << endl;
 	};
 
 	void success(string message)
 	{
-		cerr << "\033[1;32mSuccess:\033[0m " << message << endl;
+		cout << rich("Success: ", Color::green, Decoration::bold) << message << endl;
+	}
+
+	// Only color
+	string rich(string text, Color color)
+	{
+		return "\033[" + to_string(color) + "m" + text + "\033[0m";
+	}
+
+	// Only decoration
+	string rich(string text, Decoration decoration)
+	{
+		return "\033[" + to_string(decoration) + "m" + text + "\033[0m";
+	}
+
+	// Color and decoration
+	string rich(string text, Color color, Decoration decoration)
+	{
+		return "\033[" + to_string(decoration) + ";" + to_string(color) + "m" + text + "\033[0m";
 	}
 };

@@ -52,6 +52,12 @@ int filesLesson()
 		return 0;
 	}
 
+	if (input == "w")
+	{
+		writeToTestFile();
+		return 0;
+	}
+
 	printf("You provided an invalid command");
 
 	return 0;
@@ -73,7 +79,8 @@ void requestFilesInput()
 		"b - Basics",
 		"c - Create test file",
 		"r - Read test file",
-		"d - Delete test file"};
+		"d - Delete test file",
+		"w - Write to test file"};
 
 	for (string command : availableCommands)
 	{
@@ -122,7 +129,7 @@ void readTestFile()
 	}
 
 	string text;
-	print("Contents of " + FILES_PATH + FILE_NAME + ":");
+	cout << rich("Contents of " + FILES_PATH + FILE_NAME, Decoration::faint) << endl;
 	newline();
 	while (getline(file, text))
 	{
@@ -131,7 +138,7 @@ void readTestFile()
 	file.close();
 
 	newline();
-	printf("If you want to spice things up, manipulate the file directly and run this command again.\n");
+	cout << rich("Spice things up by manipulating the file directly and run this command again.\n", Decoration::faint);
 }
 
 void deleteTestFile()
@@ -153,4 +160,12 @@ void deleteTestFile()
 	}
 
 	success("File deleted");
+}
+
+void writeToTestFile()
+{
+	ofstream file(filePath(FILE_NAME, FILES_PATH));
+	string inputText = requestInput("Write to file:", true);
+	file << inputText;
+	success("File have been written to");
 }

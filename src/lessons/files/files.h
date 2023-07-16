@@ -17,4 +17,6 @@ void readTestFile();
 
 void deleteTestFile();
 
+void writeToTestFile();
+
 #endif
