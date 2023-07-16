@@ -1,9 +1,6 @@
 # learningCPlussPluss
 
-## Description
-
 This project serves the purpose of letting me learn C++ by actually programming
-<br>
 <br>
 
 ## Install and Compile
@@ -16,6 +13,8 @@ $ [package_manager_of_your_choice] install boost
 
 If you're using the provided task.json file for compiling with VS Code, remove the following flag <br>
 `"-L/opt/homebrew/Cellar/boost/1.82.0_1/lib"`
+<br>
+<br>
 
 ### Compile with VS Code
 
@@ -36,6 +35,8 @@ Type:
 ```console
 $ clang++ -std=c++17 -fcolor-diagnostics -fansi-escape-codes -lboost_system -lboost_filesystem -I./src/** ./src/main.cpp ./src/**/*.cpp ./src/**/**/*.cpp -o main
 ```
+
+<br>
 
 ## Run program
 
